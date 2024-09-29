@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind And Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Pay-Yo!</title>
+</head>
+
+<body>
+    <main class="flex justify-center mt-16">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="relative artboard artboard-demo phone-3">
+                    <div class="absolute top-12 flex justify-between space-x-72">
+                        <div></div>
+                        <button id="log-out-btn" class="btn ml-4 bg-gradient-to-r from-cyan-300 to-purple-400">Log-Out</button>
+                    </div>
+                    <div class="mb-0">
+                        <div class="stats shadow bg-indigo-300">
+                            <div class="stat">
+                                <div class="stat-title">Account Balance</div>
+                                <div id="account-balance" class="stat-value">9400</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="mb-4">
+                        <button id="add-money-tab" class="btn bg-cyan-200 hover:bg-purple-300">Add Money</button>
+                        <button id="cash-out-tab" class="btn bg-gradient-to-r  bg-cyan-200 hover:bg-purple-300">Cash Out</button>
+                    </div>
+
+                    <!---------------------------- Add Money Section ------------------------>
+
+                    <section id="add-money-section" class="hidden">
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl bg-gradient-to-br from bg-cyan-500 to bg-purple-200">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="input-add-money" type="text" placeholder="Amount" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin</span>
+                                    </label>
+                                    <input id="input-pin" type="password" placeholder="password" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="btn-add-money" class="btn btn-primary bg-gradient-to-r from-cyan-500 to-purple-500">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!--------------------------- Cash Out Section  ----------------------------->
+
+                    <section id="cash-out-section" class="hidden">
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl bg-gradient-to-br from bg-cyan-500 to bg-purple-200">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input id="input-cash-out" type="text" placeholder="Amount" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin</span>
+                                    </label>
+                                    <input id="input-pin-2" type="password" placeholder="password" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="btn-cash-out" class="btn btn-primary bg-gradient-to-r from-cyan-500 to-purple-500">Cash Out</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="./Js/tabSwitch.js"></script>
+    <script src="./Js/addMoney.js"></script>
+    <script src="./Js/cashOut.js"></script>
+</body>
+
+</html>
